@@ -1,0 +1,25 @@
+{
+  "extends": [
+    ":enableRenovate",
+    ":automergeMinor",
+    ":dependencyDashboard",
+    "group:monorepos",
+    ":ignoreModulesAndTests",
+    ":ignoreUnstable",
+    ":maintainLockFilesMonthly",
+    ":renovatePrefix",
+    ":semanticCommits",
+    ":semanticPrefixChore"
+  ],
+  "automergeType": "branch",
+  "commitBodyTable": true,
+  "dependencyDashboardAutoclose": true,
+  "enabledManagers": ["npm"],
+  "labels": ["dependencies"],
+  "prCreation": "status-success",
+  "prHourlyLimit": 3,
+  "rangeStrategy": "bump",
+  "schedule": "every weekend",
+  "separateMinorPatch": true,
+  "stabilityDays": 3
+}
