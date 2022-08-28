@@ -14,7 +14,6 @@
   "automergeType": "branch",
   "commitBodyTable": true,
   "dependencyDashboardAutoclose": true,
-  "enabledManagers": ["npm"],
   "labels": ["dependencies"],
   "prCreation": "status-success",
   "prHourlyLimit": 3,
