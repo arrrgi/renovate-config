@@ -3,22 +3,22 @@
     ":enableRenovate",
     ":automergeMinor",
     ":dependencyDashboard",
-    "group:monorepos",
     ":ignoreModulesAndTests",
     ":ignoreUnstable",
-    ":maintainLockFilesMonthly",
+    ":maintainLockFilesWeekly",
     ":renovatePrefix",
     ":semanticCommits",
-    ":semanticPrefixChore"
+    ":semanticPrefixChore",
+    "group:monorepos"
   ],
-  "automergeType": "branch",
+  "automergeType": "pr",
   "commitBodyTable": true,
   "dependencyDashboardAutoclose": true,
   "labels": ["dependencies"],
   "prCreation": "status-success",
   "prHourlyLimit": 3,
   "rangeStrategy": "bump",
-  "schedule": "every weekend",
+  "schedule": "every weekday",
   "separateMinorPatch": true,
   "stabilityDays": 3
 }
