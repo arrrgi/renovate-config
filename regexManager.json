@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Manage versions in YAML files using # renovate comments with optional datasource/versioning",
+      "fileMatch": ["\\.ya?ml$"],
+      "matchStrings": [
+        "^\\s*[^:]+:\\s*\"(?<currentValue>[^\"]+)\"\\s*#\\s*renovate:\\s*depName=(?<depName>[^\\s]+)(?:\\s+datasource=(?<datasource>[^\\s]+))?(?:\\s+versioning=(?<versioning>[^\\s]+))?\\s*$"
+      ],
+      "depNameTemplate": "{{depName}}",
+      "currentValueTemplate": "{{currentValue}}",
+      "datasourceTemplate": "{{#if datasource}}{{datasource}}{{else}}github-releases{{/if}}",
+      "versioningTemplate": "{{#if versioning}}{{versioning}}{{else}}semver{{/if}}"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     ":enableRenovate",
     ":automergeMinor",
@@ -20,5 +21,7 @@
   "rangeStrategy": "bump",
   "schedule": "every weekday",
   "separateMinorPatch": true,
-  "stabilityDays": 3
+  "stabilityDays": 3,
+  "platform": "github",
+  "rebaseWhen": "conflicted"
 }
