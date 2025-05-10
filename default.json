@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     ":enableRenovate",
-    ":automergeMinor",
+    ":automergeDisabled",
     ":dependencyDashboard",
     ":ignoreModulesAndTests",
     ":ignoreUnstable",
@@ -10,7 +10,8 @@
     ":renovatePrefix",
     ":semanticCommits",
     ":semanticPrefixChore",
-    "group:monorepos"
+    "group:monorepos",
+    "workarounds:all"
   ],
   "automergeType": "pr",
   "commitBodyTable": true,

@@ -6,7 +6,7 @@
       "description": "Manage versions in YAML files using # renovate comments with optional datasource/versioning",
       "fileMatch": ["\\.ya?ml$"],
       "matchStrings": [
-        "^\\s*[^:]+:\\s*\"(?<currentValue>[^\"]+)\"\\s*#\\s*renovate:\\s*depName=(?<depName>[^\\s]+)(?:\\s+datasource=(?<datasource>[^\\s]+))?(?:\\s+versioning=(?<versioning>[^\\s]+))?\\s*$"
+        "\\s*[^:]+:\\s*\\\"(?<currentValue>[^\\\"]+)\\\"\\s*#\\s*renovate:\\s*depName=(?<depName>[^\\s]+)(?:\\s+datasource=(?<datasource>[^\\s]+))?(?:\\s+versioning=(?<versioning>[^\\s]+))?\\n"
       ],
       "depNameTemplate": "{{depName}}",
       "currentValueTemplate": "{{currentValue}}",
